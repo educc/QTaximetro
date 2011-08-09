@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>230</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="resources.qrc">
+    <normaloff>:/images/main_icon.png</normaloff>:/images/main_icon.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="mainlayout"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>350</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMantenimiento">
+    <property name="title">
+     <string>Mantenimiento</string>
+    </property>
+    <addaction name="actionServicios"/>
+    <addaction name="actionAuto"/>
+   </widget>
+   <widget class="QMenu" name="menuRegistros">
+    <property name="title">
+     <string>Registros</string>
+    </property>
+    <addaction name="actionAgregar_Servicio"/>
+    <addaction name="actionAgregar_Auto"/>
+   </widget>
+   <widget class="QMenu" name="menuReportes">
+    <property name="title">
+     <string>Reportes</string>
+    </property>
+    <addaction name="actionRVehiculo"/>
+    <addaction name="actionTotal_Recaudado"/>
+   </widget>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionSalir"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuMantenimiento"/>
+   <addaction name="menuRegistros"/>
+   <addaction name="menuReportes"/>
+  </widget>
+  <action name="actionAgregar_Servicio">
+   <property name="text">
+    <string>Agregar Servicio</string>
+   </property>
+  </action>
+  <action name="actionAgregar_Auto">
+   <property name="text">
+    <string>Agregar Vehículo</string>
+   </property>
+  </action>
+  <action name="actionRVehiculo">
+   <property name="text">
+    <string>Recaudado por vehículo</string>
+   </property>
+  </action>
+  <action name="actionServicios">
+   <property name="text">
+    <string>Servicios</string>
+   </property>
+  </action>
+  <action name="actionAuto">
+   <property name="text">
+    <string>Vehículos</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de_este_programa">
+   <property name="text">
+    <string>Acerca de este programa</string>
+   </property>
+  </action>
+  <action name="actionTotal_Recaudado">
+   <property name="text">
+    <string>Total recaudado</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="text">
+    <string>Salir</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionSalir</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>174</x>
+     <y>114</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
